@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class Main {
 
     public record dock(String tr, Integer num){
@@ -27,5 +32,11 @@ public class Main {
                 System.out.println("str = " + str);
             }
         }
+        Stream<String> stList = Stream.of("homne", "school", "work", "time");
+        List<String> list = stList.collect(Collectors.toList());
+        for(var str1 : list){
+            System.out.println("str1 = " + str1);
+        }
+
     }
 }
